@@ -1,0 +1,855 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg==" crossorigin="anonymous"></script>
+   <!-- links -->
+
+   
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!-- JQUERY LINK -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <!--links  -->
+    <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://rawgit.com/LeshikJanz/libraries/master/Bootstrap/baguetteBox.min.css">
+    <!-- wizardlink -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  
+<link rel="stylesheet" href="style.css">
+
+
+    <title>Hello, world!</title>
+  
+  </head>
+  <style>
+    .wizard-content-left {
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.45);
+  background-image: url("images/b2.jpg");
+  background-position: center center;
+  background-size: cover;
+  height: 140vh;
+  filter: brightness(0.5);
+  /* position: absolute; */
+  padding: 30px;
+}
+.wizard-content-left h1 {
+  color: #ffffff;
+  font-size: 38px;
+  font-weight: 600;
+  padding: 12px 20px;
+  text-align: center;
+}
+
+.form-wizard {
+  color: #888888;
+  padding: 30px;
+}
+.form-wizard .wizard-form-radio {
+  display: inline-block;
+  margin-left: 5px;
+  position: relative;
+}
+.form-wizard .wizard-form-radio input[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  background-color: #dddddd;
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+}
+.form-wizard .wizard-form-radio input[type="radio"]:focus {
+  outline: 0;
+}
+.form-wizard .wizard-form-radio input[type="radio"]:checked {
+  background-color: #001b48;
+}
+.form-wizard .wizard-form-radio input[type="radio"]:checked::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+  background-color: #ffffff;
+  border-radius: 50%;
+  left: 1px;
+  right: 0;
+  margin: 0 auto;
+  top: 8px;
+}
+.form-wizard .wizard-form-radio input[type="radio"]:checked::after {
+  content: "";
+  display: inline-block;
+  webkit-animation: click-radio-wave 0.65s;
+  -moz-animation: click-radio-wave 0.65s;
+  animation: click-radio-wave 0.65s;
+  background: #000000;
+  content: '';
+  display: block;
+  position: relative;
+  z-index: 100;
+  border-radius: 50%;
+}
+.form-wizard .wizard-form-radio input[type="radio"] ~ label {
+  padding-left: 10px;
+  cursor: pointer;
+}
+.form-wizard .form-wizard-header {
+  text-align: center;
+}
+.form-wizard .form-wizard-next-btn, .form-wizard .form-wizard-previous-btn, .form-wizard .form-wizard-submit {
+  background-color: #001b48;
+  color: #ffffff;
+  display: inline-block;
+  min-width: 100px;
+  min-width: 120px;
+  padding: 10px;
+  text-align: center;
+}
+.form-wizard .form-wizard-next-btn:hover, .form-wizard .form-wizard-next-btn:focus, .form-wizard .form-wizard-previous-btn:hover, .form-wizard .form-wizard-previous-btn:focus, .form-wizard .form-wizard-submit:hover, .form-wizard .form-wizard-submit:focus {
+  color: #ffffff;
+  opacity: 0.6;
+  text-decoration: none;
+}
+.form-wizard .wizard-fieldset {
+  display: none;
+}
+.form-wizard .wizard-fieldset.show {
+  display: block;
+}
+.form-wizard .wizard-form-error {
+  display: none;
+  background-color: #001b48;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+}
+.form-wizard .form-wizard-previous-btn {
+  background-color: #001b48;
+}
+.form-wizard .form-control {
+  font-weight: 300;
+  height: auto !important;
+  padding: 15px;
+  color: #888888;
+  background-color: #f1f1f1;
+  border: none;
+}
+.form-wizard .form-control:focus {
+  box-shadow: none;
+}
+.form-wizard .form-group {
+  position: relative;
+  margin: 25px 0;
+}
+.form-wizard .wizard-form-text-label {
+  position: absolute;
+  left: 10px;
+  top: -25px;
+  transition: 0.2s linear all;
+}
+.form-wizard .focus-input .wizard-form-text-label {
+  color: #001b48;
+  top: -18px;
+  transition: 0.2s linear all;
+  font-size: 12px;
+}
+.form-wizard .form-wizard-steps {
+  margin: 30px 0;
+}
+.form-wizard .form-wizard-steps li {
+  width: 25%;
+  float: left;
+  position: relative;
+}
+.form-wizard .form-wizard-steps li::after {
+  background-color: #f3f3f3;
+  content: "";
+  height: 5px;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  border-bottom: 1px solid #dddddd;
+  border-top: 1px solid #dddddd;
+}
+.form-wizard .form-wizard-steps li span {
+  background-color: #dddddd;
+  border-radius: 50%;
+  display: inline-block;
+  height: 40px;
+  line-height: 40px;
+  position: relative;
+  text-align: center;
+  width: 40px;
+  z-index: 1;
+}
+.form-wizard .form-wizard-steps li:last-child::after {
+  width: 50%;
+}
+.form-wizard .form-wizard-steps li.active span, .form-wizard .form-wizard-steps li.activated span {
+  background-color: #001b48;
+  color: #ffffff;
+}
+.form-wizard .form-wizard-steps li.active::after, .form-wizard .form-wizard-steps li.activated::after {
+  background-color: #001b48;
+  left: 50%;
+  width: 50%;
+  border-color: #001b48;
+}
+.form-wizard .form-wizard-steps li.activated::after {
+  width: 100%;
+  border-color: #001b48;
+}
+.form-wizard .form-wizard-steps li:last-child::after {
+  left: 0;
+}
+.form-wizard .wizard-password-eye {
+  position: absolute;
+  right: 32px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+@keyframes click-radio-wave {
+  0% {
+    width: 25px;
+    height: 25px;
+    opacity: 0.35;
+    position: relative;
+  }
+  100% {
+    width: 60px;
+    height: 60px;
+    margin-left: -15px;
+    margin-top: -15px;
+    opacity: 0.0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .wizard-content-left {
+    height: auto;
+  }
+}
+
+  </style>
+
+  <body>
+
+    
+
+<!-- header -->
+
+
+<section class="header">
+  <div class="row">
+    <div class="col-md-4">
+      <a href="index.html" class="href">  <img src="images/logo.png" alt="" class="logo"></a>
+    </div>
+    <div class="col-md-8">
+      <div class="ribbon">
+
+        <input class="form-control mr-sm-2 srch" type="search" placeholder="Search" aria-label="Search"><i class="fa-solid fa-magnifying-glass sr1"></i>
+<div class="upy"> 
+        <i class="fa-solid fa-phone"></i> 9812345678 | 
+           <i class="fa-solid fa-envelope"></i> someone@gmail.com &nbsp;&nbsp; 
+           <span class="lin">    <i class="fa-brands fa-facebook-f"></i>&nbsp;
+        <i class="fa-brands fa-twitter"></i>&nbsp;
+        <i class="fa-brands fa-linkedin-in"></i>&nbsp;&nbsp;&nbsp;</span>
+        <span data-toggle="modal" data-target="#exampleModalCenter" > login</span>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="navybar">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="navbar nb">
+        <nav class="navbar navbar-expand-lg navbar-light  righty">
+          <!-- <a class="navbar-brand" href="#">Navbar</a> -->
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>         
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
+              
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+                  All Course
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="allcourse.html">Course list</a>
+                  <a class="dropdown-item" href="">Another action</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+            Notices
+                </a>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="notice.html">BBA Notice</a>   <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="notice.html">BCA Notice</a>   <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="notice.html">BBA Notice</a>   <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="notice.html">BCA Notice</a>   
+                  
+                 
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="admission.html">Admission</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="gallery.html">Gallery</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+             
+              <li class="nav-item">
+                <a class="nav-link" href="apply.html">Apply Now</a>
+              </li>
+                
+             
+            
+            </ul>
+          </div>
+        </nav>
+      
+      </div>
+    </div>
+  </div>
+</section>
+<!-- login modal -->
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div> -->
+        <div class="modal-body mby">
+          <div class="row">
+            <div class="col-md-12">
+              <img src="images/m.jpg" alt="" class="lgimg" height="213px">
+            </div>
+            <div class="col-md-12">
+              <h4 style="text-align:center; font-weight:600"> Welcom to <span style="color:#001b48;">Xavier College !</span> <BR>Login Here</h4>
+              <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">UserName <span style="color:#001b48;">*</span></label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+               
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password<span style="color:#001b48;">*</span></label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                  <small>Haven't Register? <span> <a href="Signup.html" class="sup" > Sign Up</a> </span></small>
+               
+                </div>
+             
+           
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class=" btn-secondary" data-dismiss="modal" style="background-color:#001b48; color:white;">Close</button>
+          <button type="button" class=" btn-primary" style="background-color:#001b48; color:white;">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   <section class="all">
+    <div class="wheel-start3">
+        <img src="images/c3.jpg" alt="" class="wheel-img" >
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 padd-lr0">
+                    <div class="wheel-start3-body">
+                        <h3> ADMISSION</h3>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+   </section>
+
+
+
+<!-- ====================== -->
+<section class="wizard-section">
+  <div class="container"> 
+  <div class="row no-gutters">
+    <div class="col-lg-6 col-md-6">
+      <div class="wizard-content-left d-flex justify-content-center align-items-center">
+        <h1>Admission Open For BBA,BCA,BIM</h1>
+      </div>
+    </div>
+    <div class="col-lg-6 col-md-6">
+      <div class="form-wizard">
+        <form action="" method="post" role="form">
+          <div class="form-wizard-header">
+            <p>Fill all form field to go next step</p>
+
+            <ul class="list-unstyled form-wizard-steps clearfix">
+              <li class="active"><span>1</span></li>
+              <li><span>2</span></li>
+              <li><span>3</span></li>
+          
+            </ul>
+          </div>
+          <fieldset class="wizard-fieldset show">
+            <h5>Personal Information</h5>
+            <br>
+            <div class="form-group">
+              <input type="text" class="form-control wizard-required" id="fname">
+              <label for="fname" class="wizard-form-text-label">Full Name*</label>
+              <div class="wizard-form-error"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control wizard-required" id="lname">
+              <label for="lname" class="wizard-form-text-label">Guardain's Name*</label>
+              <div class="wizard-form-error"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control wizard-required" id="lname">
+              <label for="lname" class="wizard-form-text-label">Phone No*</label>
+              <div class="wizard-form-error"></div>
+            </div>
+            <div class="form-group">
+              <input type="date" class="form-control wizard-required" id="lname">
+              <label for="lname" class="wizard-form-text-label">Date of Birth*</label>
+              <div class="wizard-form-error"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control wizard-required" id="lname">
+              <label for="lname" class="wizard-form-text-label">Temporary Address*</label>
+              <div class="wizard-form-error"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control wizard-required" id="lname">
+              <label for="lname" class="wizard-form-text-label">Permanent Address*</label>
+              <div class="wizard-form-error"></div>
+            </div>
+            <div class="form-group">
+              Gender
+              <div class="wizard-form-radio">
+                <input name="radio-name" id="radio1" type="radio">
+                <label for="radio1">Male</label>
+              </div>
+              <div class="wizard-form-radio">
+                <input name="radio-name" id="radio2" type="radio">
+                <label for="radio2">Female</label>
+              </div>
+            </div>
+        
+            <div class="form-group clearfix">
+              <a href="javascript:;" class="form-wizard-next-btn float-right">Next</a>
+            </div>
+          </fieldset>	
+          <fieldset class="wizard-fieldset">
+            <h5> SEE or Equivalent level</h5>
+            <br>
+            <div class="form-group">
+              <input type="email" class="form-control wizard-required" id="email">
+              <label for="email" class="wizard-form-text-label">School Name*</label>
+              <div class="wizard-form-error"></div>
+            </div>
+            <div class="form-group">
+              <input type="email" class="form-control wizard-required" id="email">
+              <label for="email" class="wizard-form-text-label">School Address*</label>
+              <div class="wizard-form-error"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control wizard-required" id="username">
+              <label for="username" class="wizard-form-text-label">Board*</label>
+              <div class="wizard-form-error"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control wizard-required" id="pwd">
+              <label for="pwd" class="wizard-form-text-label">Symbol No*</label>
+              <div class="wizard-form-error"></div>
+            
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control wizard-required" id="cpwd">
+              <label for="cpwd" class="wizard-form-text-label">GPA*</label>
+              <div class="wizard-form-error"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control wizard-required" id="cpwd">
+              <label for="cpwd" class="wizard-form-text-label">Passed Year*</label>
+              <div class="wizard-form-error"></div>
+            </div>
+            <div class="form-group clearfix">
+              <a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+              <a href="javascript:;" class="form-wizard-next-btn float-right">Next</a>
+            </div>
+          </fieldset>	
+          <fieldset class="wizard-fieldset">
+            <h5> +2 or Equivalent Level</h5>
+            <br>
+            <div class="form-group">
+              <input type="text" class="form-control wizard-required" id="bname">
+              <label for="bname" class="wizard-form-text-label">College Name*</label>
+              <div class="wizard-form-error"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control wizard-required" id="brname">
+              <label for="brname" class="wizard-form-text-label">College Addresss*</label>
+              <div class="wizard-form-error"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control wizard-required" id="acname">
+              <label for="acname" class="wizard-form-text-label">Board*</label>
+              <div class="wizard-form-error"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control wizard-required" id="acon">
+              <label for="acon" class="wizard-form-text-label">Symbol No*</label>
+              <div class="wizard-form-error"></div>
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control wizard-required" id="acon">
+              <label for="acon" class="wizard-form-text-label">CGPA*</label>
+              <div class="wizard-form-error"></div>
+            </div>
+            <div class="form-group">
+              <select class="form-control" id="exampleFormControlSelect1" class="form-control wizard-required" id="acon">
+                <option>Humanities</option>
+                <option>Business Studies</option>
+                <option>Computer Science</option>
+                <option>Hotel Management</option>
+                
+              </select>
+              <!-- <input type="text" class="form-control wizard-required" id="acon"> -->
+              <label for="acon" class="wizard-form-text-label">Group*</label>
+              <div class="wizard-form-error"></div>
+            </div>
+
+
+            <div class="form-group clearfix">
+              <a href="javascript:;" class="form-wizard-previous-btn float-left">Previous</a>
+              <a href="javascript:;" class="form-wizard-next-btn float-right">Next</a>
+            </div>
+          </fieldset>	
+        
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+</section>
+
+
+   <footer class="footer-section">
+    <div class="container">
+        <div class="footer-cta pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="cta-text">
+                            <h4>Find us</h4>
+                            <span>Kathmandu,Bagmati</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="fas fa-phone"></i>
+                        <div class="cta-text">
+                            <h4>Call us</h4>
+                            <span>9810000000</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4 mb-30">
+                    <div class="single-cta">
+                        <i class="far fa-envelope-open"></i>
+                        <div class="cta-text">
+                            <h4>Mail us</h4>
+                            <span>someone@info.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-content pt-5 pb-5">
+            <div class="row">
+                <div class="col-xl-4 col-lg-4 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-logo">
+                            <a href="index.html"><img src="images/logo.png" class="img-fluid" alt="logo"></a>
+                        </div>
+                        <div class="footer-text">
+                            <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
+                            elit,Lorem ipsum dolor sit amet.</p>
+                        </div>
+                        <div class="footer-social-icon">
+                            <span>Follow us</span>
+                            <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+                            <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+                            <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-30">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Useful Links</h3>
+                        </div>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="about_us.html">About Us</a></li>
+                            <li><a href="allcourse.html">All Course</a></li>
+                            <li><a href="notice.html">Notices</a></li>
+                            <li><a href="gallery.html">Gallery</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                      
+                          
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-md-6 mb-30">
+                  <div class="footer-widget chowk">
+                      <div class="footer-widget-heading">
+                          <h3>Programmes</h3>
+                      </div>
+                      <ul>
+                          <li><a href="course_detail.html">BCA</a></li>
+                          <li><a href="course_detail.html">BBS</a></li>
+                          <li><a href="course_detail.html">BSW</a></li>
+                          <li><a href="course_detail.html">BSE</a></li>
+                          <li><a href="course_detail.html">BS</a></li>
+                          <li><a href="course_detail.html">BBM</a></li>
+                          <li><a href="course_detail.html">BS</a></li>
+                        
+                      </ul>
+                  </div>
+              </div>
+                <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+                    <div class="footer-widget">
+                        <div class="footer-widget-heading">
+                            <h3>Subscribe</h3>
+                        </div>
+                        <div class="footer-text mb-25">
+                            <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+                        </div>
+                        <div class="subscribe-form">
+                            <form action="#">
+                                <input type="text" placeholder="Email Address">
+                                <button><i class="fab fa-telegram-plane"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="footer-widget">
+                      <div class="footer-widget-heading">
+                          <h3>Help & Support</h3>
+                          <p style="color:white; font-size:14px;line-height: 28px;">Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
+                            elit,Lorem ipsum dolor sit amet.</p>
+                      </div>
+                      <ul>
+                        <li><a href="faq.html">FAQs</a></li>
+                        <li><a href="event_detail.html">Events</a></li>
+                        <li><a href="apply.html">Apply Now</a></li>
+                      
+                      
+                        </ul>
+                     
+                  </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12 col-lg-12 text-center text-lg-left">
+                    <div class="copyright-text">
+                        <p style="text-align:center;">Next Aussie Tech</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+  </footer>
+  
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+<!-- ========== -->
+
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+    <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+  </body>
+  <!-- form wizard -->
+<script>
+  jQuery(document).ready(function() {
+	// click on next button
+	jQuery('.form-wizard-next-btn').click(function() {
+		var parentFieldset = jQuery(this).parents('.wizard-fieldset');
+		var currentActiveStep = jQuery(this).parents('.form-wizard').find('.form-wizard-steps .active');
+		var next = jQuery(this);
+		var nextWizardStep = true;
+		parentFieldset.find('.wizard-required').each(function(){
+			var thisValue = jQuery(this).val();
+
+			if( thisValue == "") {
+				jQuery(this).siblings(".wizard-form-error").slideDown();
+				nextWizardStep = false;
+			}
+			else {
+				jQuery(this).siblings(".wizard-form-error").slideUp();
+			}
+		});
+		if( nextWizardStep) {
+			next.parents('.wizard-fieldset').removeClass("show","400");
+			currentActiveStep.removeClass('active').addClass('activated').next().addClass('active',"400");
+			next.parents('.wizard-fieldset').next('.wizard-fieldset').addClass("show","400");
+			jQuery(document).find('.wizard-fieldset').each(function(){
+				if(jQuery(this).hasClass('show')){
+					var formAtrr = jQuery(this).attr('data-tab-content');
+					jQuery(document).find('.form-wizard-steps .form-wizard-step-item').each(function(){
+						if(jQuery(this).attr('data-attr') == formAtrr){
+							jQuery(this).addClass('active');
+							var innerWidth = jQuery(this).innerWidth();
+							var position = jQuery(this).position();
+							jQuery(document).find('.form-wizard-step-move').css({"left": position.left, "width": innerWidth});
+						}else{
+							jQuery(this).removeClass('active');
+						}
+					});
+				}
+			});
+		}
+	});
+	//click on previous button
+	jQuery('.form-wizard-previous-btn').click(function() {
+		var counter = parseInt(jQuery(".wizard-counter").text());;
+		var prev =jQuery(this);
+		var currentActiveStep = jQuery(this).parents('.form-wizard').find('.form-wizard-steps .active');
+		prev.parents('.wizard-fieldset').removeClass("show","400");
+		prev.parents('.wizard-fieldset').prev('.wizard-fieldset').addClass("show","400");
+		currentActiveStep.removeClass('active').prev().removeClass('activated').addClass('active',"400");
+		jQuery(document).find('.wizard-fieldset').each(function(){
+			if(jQuery(this).hasClass('show')){
+				var formAtrr = jQuery(this).attr('data-tab-content');
+				jQuery(document).find('.form-wizard-steps .form-wizard-step-item').each(function(){
+					if(jQuery(this).attr('data-attr') == formAtrr){
+						jQuery(this).addClass('active');
+						var innerWidth = jQuery(this).innerWidth();
+						var position = jQuery(this).position();
+						jQuery(document).find('.form-wizard-step-move').css({"left": position.left, "width": innerWidth});
+					}else{
+						jQuery(this).removeClass('active');
+					}
+				});
+			}
+		});
+	});
+	//click on form submit button
+	jQuery(document).on("click",".form-wizard .form-wizard-submit" , function(){
+		var parentFieldset = jQuery(this).parents('.wizard-fieldset');
+		var currentActiveStep = jQuery(this).parents('.form-wizard').find('.form-wizard-steps .active');
+		parentFieldset.find('.wizard-required').each(function() {
+			var thisValue = jQuery(this).val();
+			if( thisValue == "" ) {
+				jQuery(this).siblings(".wizard-form-error").slideDown();
+			}
+			else {
+				jQuery(this).siblings(".wizard-form-error").slideUp();
+			}
+		});
+	});
+	// focus on input field check empty or not
+	jQuery(".form-control").on('focus', function(){
+		var tmpThis = jQuery(this).val();
+		if(tmpThis == '' ) {
+			jQuery(this).parent().addClass("focus-input");
+		}
+		else if(tmpThis !='' ){
+			jQuery(this).parent().addClass("focus-input");
+		}
+	}).on('blur', function(){
+		var tmpThis = jQuery(this).val();
+		if(tmpThis == '' ) {
+			jQuery(this).parent().removeClass("focus-input");
+			jQuery(this).siblings('.wizard-form-error').slideDown("3000");
+		}
+		else if(tmpThis !='' ){
+			jQuery(this).parent().addClass("focus-input");
+			jQuery(this).siblings('.wizard-form-error').slideUp("3000");
+		}
+	});
+});
+
+</script>
+
+</html>
